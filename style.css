@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,500&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background: #0a1f44;
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+
+.div-header{
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+}
+
+
+input{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border:none;
+    background: transparent;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid white;
+}
+
+button{
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 10px 15px;
+    margin-left: 15px;
+    background: #ff1e42;
+    color: white;
+    border-color: #ff3355;
+    border-radius: 20px;
+}
+
+
+.card{
+    max-width: 400px;
+    margin: 70px auto;
+    visibility: hidden;
+}
+
+row{
+    text-align: center;
+}
+
+.ciudades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#ciudad{
+    font-size: 2rem;
+    color: #717681;
+}
+
+#temperatura{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #191919;
+}
+
+#temperatura sup{
+    color: #FFAC41
+}
+
+
+#wicon{
+    width: 5rem;
+    margin: 72px auto;
+}
+
+#descripcion{
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #717681;
+}
+

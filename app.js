@@ -1,21 +1,23 @@
-//La función encodeURIComponent() es una función incorporada en JavaScript que toma una cadena como entrada y devuelve una nueva cadena en la que los caracteres especiales que son parte de una URL (como espacios, acentos, símbolos, etc.) se han reemplazado por sus equivalentes codificados. Esto es importante cuando se envían datos a través de una URL, ya que ciertos caracteres pueden tener significados especiales en una URL y deben codificarse para que la URL sea válida y los datos se transmitan correctamente.
-
 let btn = document.querySelector("button") // boton consulta
 let city = document.getElementById("city") // valor del input guardado
-
+let card = document.querySelector(".card")
 
 btn.addEventListener("click",()=>{ // evento click
+card.style.visibility= "visible"
 let valueCity = city.value
-document.querySelector(".container").style.visibility= "visible"
-
 //validacion de ingreso de string vacio
-valueCity == "" ? alert("Campo vacio: DEBES INGRESAR UNA CIUDAD") : valueCity
+
+if (valueCity == "") {
+  alert("Campo vacio: DEBES INGRESAR UNA CIUDAD")
+  card.style.visibility = "hidden"  /* esconde */
+}
+
+// valueCity == "" ? alert("Campo vacio: DEBES INGRESAR UNA CIUDAD")  : valueCity
 
 loadCity(valueCity)
 
 // vacia el campo del input
 city.value = ""
-
 })
 
 let ciudad = document.getElementById("ciudad") /* nombre de ciudad */
@@ -47,8 +49,8 @@ description.textContent = data.weather[0].description
   // manejo del error 404
   .fail(function(jqXHR, errorThrown) {
     jqXHR.status === 404 ? alert(`Error ${jqXHR.status} ${errorThrown} Ciudad no encontrada`) : jqXHR
+    card.style.visibility = "hidden" /* esconde */
 })
-
 
 }
 
