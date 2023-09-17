@@ -35,8 +35,8 @@ function loadCity(consult){
 
 /* nombre de ciudad */
 ciudad.textContent = data.name
- /*temperatura */
-temp.innerHTML = data.main.temp + "<sup>°C</sup>" 
+ /*temperatura, tofixed(1) reduce a 1 decimal despues de la coma */
+temp.innerHTML = data.main.temp.toFixed(1) + "<sup>°C</sup>" 
 /* icono de temperatura */
 icon.src =`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
 icon.style.display = "block"
@@ -44,11 +44,9 @@ icon.style.display = "block"
 description.textContent = data.weather[0].description
 
   })
-
+  // manejo del error 404
   .fail(function(jqXHR, errorThrown) {
-    // Maneja el error aquí
     jqXHR.status === 404 ? alert(`Error ${jqXHR.status} ${errorThrown} Ciudad no encontrada`) : jqXHR
-
 })
 
 
