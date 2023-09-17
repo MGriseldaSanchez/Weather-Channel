@@ -3,8 +3,10 @@
 let btn = document.querySelector("button") // boton consulta
 let city = document.getElementById("city") // valor del input guardado
 
+
 btn.addEventListener("click",()=>{ // evento click
 let valueCity = city.value
+document.querySelector(".container").style.visibility= "visible"
 
 //validacion de ingreso de string vacio
 valueCity == "" ? alert("Campo vacio: DEBES INGRESAR UNA CIUDAD") : valueCity
@@ -13,8 +15,6 @@ loadCity(valueCity)
 
 // vacia el campo del input
 city.value = ""
-
-// document.querySelector(".container").style.visibility= "visible"
 
 })
 
