@@ -48,8 +48,9 @@ description.textContent = data.weather[0].description
   })
   // manejo del error 404
   .fail(function(jqXHR, errorThrown) {
+   document.querySelector(".mb-3").style.display = "none" // fix barra blanca al no encontrar ciudad
     jqXHR.status === 404 ? alert(`Error ${jqXHR.status} ${errorThrown} Ciudad no encontrada`) : jqXHR
-    card.style.visibility = "hidden" /* esconde */
+    
 })
 
 }
